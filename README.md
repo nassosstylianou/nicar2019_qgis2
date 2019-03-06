@@ -6,7 +6,7 @@
 
 ## What are we going to cover?
 
-This workshop should build on your existing knowledge of QGIS and show you how to filter and analyse geographic datasets, before familiarising yourself with exporting the maps you have created using the print composer. 
+This workshop should build on your existing knowledge of QGIS and show you how to filter and analyse geographic datasets using queries, before familiarising yourself with exporting the maps you have created using the print composer. 
 
 This class is ideal for those who attended the QGIS I workshop or already know the basics of visualising geographic data in QGIS. We will cover techniques like writing queries to filter your data, aggregating data for easier analysis, adding labels to your map before exporting as well as using Open Street Map data in QGIS. 
 
@@ -24,8 +24,11 @@ For this tutorial, we will go through the following:
 
 ### What data are we using?
 
--------------------
+The data we are using in this workshop can be found and download here:
+https://www.dropbox.com/sh/tx1wpb5gr9znvxx/AABq53sdjrt4BArTUzn7WWh8a?dl=0
 
+You can go through the introduction class, QGIS I, here:
+bit.ly/qgis1_nicar   
 
 ## Filtering shapefiles
 
