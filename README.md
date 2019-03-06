@@ -69,7 +69,7 @@ But you can look at the data that each Field contains directly in this Query Bui
 Looking at all the Fields, a safe bet to filter by name would be using the `NAME` column. So in our `Fields` column, lets select and double click the `NAME` option. 
 
 
-![Filtering by name](screenshots/qgis2_scrn5_filter_by_name)
+![Filtering by name](screenshots/qgis2_scrn5_filter_by_name.png)
 
 
 So what this does, as you can see above, is that it populates the space where we are meant to write our query with the text `"``NAME``"`. Now if we click on the `All` button just below the `Values` block, it will populate the `Values` section with the name of each of the counties that are included in our shapefile. 
@@ -269,7 +269,7 @@ Once you have selected the power plants you want, the next step to making the ch
 When we select that option, we get a popup to select the specific layers we want to look at, the layer for the points we want to count and the layer with the polygons that we want the points to fall within. 
 
 
-![Counting points in polygons popup](screenshots/qgis2_scrn30_count_points_in_polygons1.png)
+![Counting points in polygons popup](screenshots/qgis2_scrn30b_count_points_in_polygons1.png)
 
 
 So for our data, the points layer is the `California_Power_Plant` and the polygons layer is the `CA_Counties_TIGER2016`. The Count field name is automatically filled in for us with the name `NUMPOINTS`, you can change that if you want to. 
