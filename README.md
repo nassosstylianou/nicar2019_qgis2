@@ -17,10 +17,10 @@ For this tutorial, we will go through the following:
 
 * [Filtering shapefiles](#filtering-shapefiles)
 * [Selecting data by location](#selecting-data-by-location)
-* [Aggregating data: Points in polygons](#aggregating-data:-points-in-polygons)
+* [Aggregating data: Points in polygons](#aggregating-data-points-in-polygons)
 * [Adding labels to your map](#adding-labels-to-your-map)
 * [Tips and tricks when exporting your map](#tips-and-tricks-when-exporting-your-map)
-* [Add Open Street Map data to your map: Quick OSM](#add-open-street-map-data-to-your-map:-quick-osm)
+* [Add Open Street Map data to your map: Quick OSM](#add-open-street-map-data-to-your-map-quick-osm)
 
 
 ### What data are we using?
