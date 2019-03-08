@@ -28,7 +28,7 @@ The data we are using in this workshop can be found and download here:
 https://www.dropbox.com/sh/tx1wpb5gr9znvxx/AABq53sdjrt4BArTUzn7WWh8a?dl=0
 
 You can go through the introduction class, QGIS I, here:
-bit.ly/qgis1_nicar   
+[bit.ly/qgis1_nicar](bit.ly/qgis1_nicar)  
 
 ## Filtering shapefiles
 
