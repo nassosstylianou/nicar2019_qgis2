@@ -42,7 +42,7 @@ So first up you should load in our  `CA_Counties_TIGER2016.shp` shapefile into Q
 
 At this stage, you should also bring in your power plant dataset that you worked with in (the earlier QGIS I tutorial)[bit.ly/qgis1_nicar] as well. 
 
-As with many things in QGIS, there is more than  one single way to filter your data in QGIS, but we will cover the main one here, but if you come across another way or are used to working in a different process, then that completely fine. 
+As with many things in QGIS, there is more than  one single way to filter your data, so if you come across another way or are used to working in a different process, then that completely fine. 
 
 So make sure you have the counties shapefile selected in the Layers panel, as in the screenshot below. 
 
@@ -62,12 +62,11 @@ Once you select the Filter option, you should get a popup screen that looks some
 
 ![The Filter Query Builder in QGIS](screenshots/qgis2_scrn4_filter_query_builder.png)
 
-
-This is essentially a Query Builder and is quite a powerful tool and something experienced QGIS users will often use to query and filter their data as they explore their data in the process of making a map. 
+This Query Builder is a powerful tool and something experienced QGIS users will often use to query and filter as they explore their data before making a map.
 
 The `Fields` column essentially displays all the columns in your shapefile data, if it helps to think about a shapefile as an Excel spreadsheet, which you can see if you right click on your layer and click `Open Attribute table` . This is the data that comes for each feature in your shapefile layer. 
 
-But you can look at the data that each Field contains directly in this Query Builder. Now as we mentioned earlier, what we want to do is filter the counties shapefile so that we are seeing just ‘Orange’ county and disregard all others for now. So, we want to find the field with the county names and select Orange county. 
+But you can look at the data that each Field contains directly in this Query Builder. As mentioned earlier, what we want to do is filter the counties shapefile so that we are seeing just ‘Orange’ county and disregard all others. So we want to find the field with the county names and select Orange county. 
 
 Looking at all the Fields, a safe bet to filter by name would be using the `NAME` column. So in our `Fields` column, lets select and double click the `NAME` option. 
 
@@ -75,7 +74,7 @@ Looking at all the Fields, a safe bet to filter by name would be using the `NAME
 ![Filtering by name](screenshots/qgis2_scrn5_filter_by_name.png)
 
 
-So what this does, as you can see above, is that it populates the space where we are meant to write our query with the text `"``NAME``"`. Now if we click on the `All` button just below the `Values` block, it will populate the `Values` section with the name of each of the counties that are included in our shapefile. 
+So what this does, as you can see above, is that it populates the space where we are meant to write our query with the text `"NAME"`. Now if we click on the `All` button just below the `Values` block, it will populate the `Values` section with the name of each of the counties that are included in our shapefile. 
 
 As the text in the block below the title `Provider specific filter expression` is essentially a space for `SQL` statements, we need to have an operator after our `"NAME"`. So after name, we should click on the `=` operator. 
 
@@ -126,7 +125,9 @@ But when we run our query to include all power plants that satisfy the criteria 
 ![Checking how many entries in our data after running the complex query](screenshots/qgis2_scrn10_post_complex_query.png)
 
 
-Here is the query we run:
+Here is the query we run:  
+
+
 `("General_Fu" = 'Solar' OR "General_Fu" = 'Solar Thermal') AND ("MW" > 10) AND ("Status" = 'Operating')`
 
 Now if we wanted to actually save out this filtered selection as a new file and only work with the selected data so that we do not have to load and import the entire dataset with almost 2,000 rows, then all you need to do is right click on the layer while it is filtered and click `Export > Save Features As…` 
