@@ -32,7 +32,9 @@ You can go through the introduction class, QGIS I, here:
 
 ## Filtering shapefiles
 
-You will find that there will be times when you only want to use a portion of the data included in your shapefile. For example in our case, we have a shapefile with all counties in California, but say we just want to look at Orange County, where we are currently located. 
+You will find that there will be times when you only want to use a portion of the data included in your shapefile. 
+
+For example in our case, we have a shapefile with all counties in California (`CA_Counties_TIGER2016.shp`), but say we just want to look at Orange County, where we are currently located. 
 
 If we do want to work with just Orange County, instead of loading in the shapefile with all California’s counties, we can actually filter out all other counties and select just Orange county. 
 
@@ -40,7 +42,7 @@ So first up you should load in our  `CA_Counties_TIGER2016.shp` shapefile into Q
 
 ![Adding a shapefile into QGIS](screenshots/qgis2_scrn1_adding_shapefile_into_qgis.png) 
 
-At this stage, you should also bring in your power plant dataset that you worked with in [the earlier QGIS I tutorial](https://docs.google.com/document/d/13LMw_nSkbels9-Y2zQZKbyoZtfGnAE7dJLZnCuaSnJY/edit) as well. 
+At this stage, you should also bring in your power plant dataset (`California_Power_Plant.shp`) that you worked with in [the earlier QGIS I tutorial](https://docs.google.com/document/d/13LMw_nSkbels9-Y2zQZKbyoZtfGnAE7dJLZnCuaSnJY/edit) as well. This shapefile includes point data for each power plant in California.
 
 As with many things in QGIS, there is more than  one single way to filter your data, so if you come across another way or are used to working in a different process, then that completely fine. 
 
@@ -149,7 +151,7 @@ So now you should be able to not only filter geographic data you have brought in
 
 Another thing you can use QGIS for is to select data by its geographic location. 
 
-So say we want to select power plants from the `California_Power_Plant.shp`, which as we saw above includes point data for each power plant in California, located in a few select counties. To do so, we can use the `CA_Counties_TIGER2016.shp`, which the shapefile of every county in California that we used earlier to filter Orange county.
+So say we want to select power plants located in a few select California counties.
 
 The difference of selecting by location to the filtering we did earlier is that we are selecting data in **one dataset based on the geographic location which comes from another dataset**, the counties shapefile. 
 
