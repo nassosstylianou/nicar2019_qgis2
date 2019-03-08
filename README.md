@@ -239,79 +239,6 @@ Awesome, you have now created a new shapefile with just the power plants that ar
 
 ![Just the power plants in our selected counties](screenshots/qgis2_scrn24_power_plants_selected_counties.png)
 
-## Aggregating data: Points in polygons
-
-What if you have a lot of point data, and you want to actually make a choropleth map of the number of points in each area? For example in our case, we want to make a map displaying the number of **solar** **power plants** in each of California’s counties?
-
-You could export the data and group it by county for example if you have a counties column in your dataset, or if you don’t you could geocode the data to find the county each point lies within, but we can count how many points are located within each polygon easily within QGIS with a `Count points in polygons` spatial analysis. 
-
-First up, we will select the solar power plants in the same way we explored above, so if we right click the `California_Power_Plant` layer and select `Open Attribute Table` and then click the `Select features by expression` icon at top of the toolbar, we can write a query to filter just the plants which have `Solar` in the `General_Fu` column.
-
-
-![Opening the attribute table](screenshots/qgis2_scrn25_open_attribute_table.png)
-
-
-
-![Filtering just for solar plants](screenshots/qgis2_scrn28_filter_solar2.png)
-
-
-And if you click `Select features` at the bottom once you have queried by Solar, you should get something like this, which shows the points highlighted in yellow (selected) that are the Solar power plants.
-
-
-![Only selected power plants (solar) are highlighted](screenshots/qgis2_scrn29_filter_solar3.png)
-
-
-Once you have selected the power plants you want, the next step to making the choropleth map is to run the `Count Points in Polygon` analysis.
-
-`Vector > Analysis Tools > Count Points in Polygon`
-
-
-![Counting points in polygons option](screenshots/qgis2_scrn30a_count_points_in_polygons.png)
-
-
-When we select that option, we get a popup to select the specific layers we want to look at, the layer for the points we want to count and the layer with the polygons that we want the points to fall within. 
-
-
-![Counting points in polygons popup](screenshots/qgis2_scrn30b_count_points_in_polygons1.png)
-
-
-So for our data, the points layer is the `California_Power_Plant` and the polygons layer is the `CA_Counties_TIGER2016`. The Count field name is automatically filled in for us with the name `NUMPOINTS`, you can change that if you want to. 
-
-Remember given we want to see just the solar power plants, which we selected above, we need to make sure that `Selected features only` is ticked. 
-
-When we click the `Run` button, what this will do is that it will create a new temporary layer which is identical to the counties shapefile but append a numeric column called `NUMPOINTS`, which will have the number of solar power plants in the NUMPOINTS column. 
-
-When you go back to your main QGIS window after the count points in polygons analysis finishes, you will get a new layer called `Count` in your layer window. 
-
-
-![New shapefile with counts for each polygon created](screenshots/qgis2_scrn31_count_points_in_polygons2.png)
-
-
-To make your choropleth map, you need to double click on the Count layer and make your map as you would normally do (see QGIS I).
-
-`Double click Count layer > Symbology > Graduated`  
-
-
-![Making a choropleth map with this new data](screenshots/qgis2_scrn32_count_points_in_polygons3.png)
-
-
-Once you select the Graduated option, you can then pick the column which contains the data you want to use for your choropleth map, which we know in our case is the column called `NUMPOINTS`. 
-
-You can then choose the mode you want - have gone for Equal Interval here - and picked five classes, but what you choose is up to you!
-
-
-![Picking your options to create a choropleth map](screenshots/qgis2_scrn33_count_points_in_polygons3.png)
-
-
-Once you click `Classify`, you will get the different classes and colours QGIS has selected for your map based on the input options.
-
-![Picking your options to create a choropleth map](screenshots/qgis2_scrn34_count_points_in_polygons4.png)
-
-
-Success! If you then go back to the main QGIS window, you can see your choropleth map where each county is coloured based on the number of solar power plants it has. 
-
-
-![Choropleth map is coloured by how many solar power plants are in each county](screenshots/qgis2_scrn35_count_points_in_polygons5.png)
 
 ## Adding labels to your map
 
@@ -389,9 +316,81 @@ To add a logo to your map click `Add Item` > `Add Picture`, draw a box where you
 ![Adding a logo to your map](screenshots/qgis2_scrn47_printcomposer5.png)
 
 
-
 You can now export the map as an image, under `Layout` > `Export as Image` or as an SVG under `Layout` > `Export as SVG` , although the SVG export function is probably better used at an earlier stage, before all the labels etc have been added, so that you can edit the map in Adobe Illustrator, say, and add the extras using Illustrator itself.
 
+
+## Aggregating data: Points in polygons
+
+What if you have a lot of point data, and you want to actually make a choropleth map of the number of points in each area? For example in our case, we want to make a map displaying the number of **solar** **power plants** in each of California’s counties?
+
+You could export the data and group it by county for example if you have a counties column in your dataset, or if you don’t you could geocode the data to find the county each point lies within, but we can count how many points are located within each polygon easily within QGIS with a `Count points in polygons` spatial analysis. 
+
+First up, we will select the solar power plants in the same way we explored above, so if we right click the `California_Power_Plant` layer and select `Open Attribute Table` and then click the `Select features by expression` icon at top of the toolbar, we can write a query to filter just the plants which have `Solar` in the `General_Fu` column.
+
+
+![Opening the attribute table](screenshots/qgis2_scrn25_open_attribute_table.png)
+
+
+
+![Filtering just for solar plants](screenshots/qgis2_scrn28_filter_solar2.png)
+
+
+And if you click `Select features` at the bottom once you have queried by Solar, you should get something like this, which shows the points highlighted in yellow (selected) that are the Solar power plants.
+
+
+![Only selected power plants (solar) are highlighted](screenshots/qgis2_scrn29_filter_solar3.png)
+
+
+Once you have selected the power plants you want, the next step to making the choropleth map is to run the `Count Points in Polygon` analysis.
+
+`Vector > Analysis Tools > Count Points in Polygon`
+
+
+![Counting points in polygons option](screenshots/qgis2_scrn30a_count_points_in_polygons.png)
+
+
+When we select that option, we get a popup to select the specific layers we want to look at, the layer for the points we want to count and the layer with the polygons that we want the points to fall within. 
+
+
+![Counting points in polygons popup](screenshots/qgis2_scrn30b_count_points_in_polygons1.png)
+
+
+So for our data, the points layer is the `California_Power_Plant` and the polygons layer is the `CA_Counties_TIGER2016`. The Count field name is automatically filled in for us with the name `NUMPOINTS`, you can change that if you want to. 
+
+Remember given we want to see just the solar power plants, which we selected above, we need to make sure that `Selected features only` is ticked. 
+
+When we click the `Run` button, what this will do is that it will create a new temporary layer which is identical to the counties shapefile but append a numeric column called `NUMPOINTS`, which will have the number of solar power plants in the NUMPOINTS column. 
+
+When you go back to your main QGIS window after the count points in polygons analysis finishes, you will get a new layer called `Count` in your layer window. 
+
+
+![New shapefile with counts for each polygon created](screenshots/qgis2_scrn31_count_points_in_polygons2.png)
+
+
+To make your choropleth map, you need to double click on the Count layer and make your map as you would normally do (see QGIS I).
+
+`Double click Count layer > Symbology > Graduated`  
+
+
+![Making a choropleth map with this new data](screenshots/qgis2_scrn32_count_points_in_polygons3.png)
+
+
+Once you select the Graduated option, you can then pick the column which contains the data you want to use for your choropleth map, which we know in our case is the column called `NUMPOINTS`. 
+
+You can then choose the mode you want - have gone for Equal Interval here - and picked five classes, but what you choose is up to you!
+
+![Picking your options to create a choropleth map](screenshots/qgis2_scrn33_count_points_in_polygons3.png)
+
+
+Once you click `Classify`, you will get the different classes and colours QGIS has selected for your map based on the input options.
+
+![Picking your options to create a choropleth map](screenshots/qgis2_scrn34_count_points_in_polygons4.png)
+
+
+Success! If you then go back to the main QGIS window, you can see your choropleth map where each county is coloured based on the number of solar power plants it has. 
+
+
+![Choropleth map is coloured by how many solar power plants are in each county](screenshots/qgis2_scrn35_count_points_in_polygons5.png)
 
 ## Add Open Street Map data to your map: Quick OSM
 
