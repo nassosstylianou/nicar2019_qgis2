@@ -40,7 +40,7 @@ So first up you should load in our  `CA_Counties_TIGER2016.shp` shapefile into Q
 
 ![Adding a shapefile into QGIS](screenshots/qgis2_scrn1_adding_shapefile_into_qgis.png) 
 
-At this stage, you should also bring in your power plant dataset that you worked with in (the earlier QGIS I tutorial)[bit.ly/qgis1_nicar] as well. 
+At this stage, you should also bring in your power plant dataset that you worked with in [the earlier QGIS I tutorial](https://docs.google.com/document/d/13LMw_nSkbels9-Y2zQZKbyoZtfGnAE7dJLZnCuaSnJY/edit) as well. 
 
 As with many things in QGIS, there is more than  one single way to filter your data, so if you come across another way or are used to working in a different process, then that completely fine. 
 
