@@ -312,7 +312,7 @@ To add a source, repeat the steps above on creating a title but lower the font s
 
 
 
-To add a logo to your map click `Add Item` > `Add Picture`, draw a box where you want it and then in the `Image source` section of `Main Properties` on the right browse to the location of your picture. Insert the image and then drag it to the bottom right of the map.
+To add a logo to your map click `Add Item` > `Add Picture`, draw a box where you want it and then in the `Image source` section of `Main Properties` on the right browse to the location of your picture, which is in the screenshots folder. Insert the image and then drag it to the bottom right of the map.
 
 ![Adding a logo to your map](screenshots/qgis2_scrn47_printcomposer5.png)
 
