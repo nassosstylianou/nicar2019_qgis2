@@ -424,7 +424,7 @@ It seems that if you’re trying to download too much data Quick OSM just says t
 
 `ogr2ogr -f "SQLite" -dsco SPATIALITE=YES -spat 2.59 46.58 -1.44 47.07 out.db in.pbf` 
 
-(where `-spat` is the west, south, east, north coordinates of the area within the downloaded data that you want to extract). Then you can add the spatialite layer in QGIS and filter it for the type of data you need, eg get just the motorways by filtering for polylines and `"``highways``"` `=` `'``motorways``'`
+(where `-spat` is the west, south, east, north coordinates of the area within the downloaded data that you want to extract). Then you can add the spatialite layer in QGIS and filter it for the type of data you need, eg get just the motorways by filtering for polylines and `"highways"` `=` `'motorways'`
 
 
 
