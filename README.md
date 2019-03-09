@@ -415,7 +415,7 @@ Hit `Run query` once your QuickOSM window looks like this:
 
 After you’ve run that on both motorways and trunks (here I’ve also got state boundaries by setting the `Key`  as `admin_level` and `Value` as `4` - [wiki here](https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#admin_level)) you should have something like this:
 
-![How your map looks with OSM data](screenshots/qgis2_scrn49_osm2.png)
+![How your map looks with OSM data](screenshots/qgis2_scrn_osm.png)
 
 
 **Bonus extra:**
