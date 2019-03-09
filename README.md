@@ -263,7 +263,7 @@ If we were doing a story on one type of power plants we’d want to add criteria
 
 Click the `∈` sign to get to the `Expression String Builder` and when that opens expand the `Fields and Values` section and double click the column we want to use as a criteria: `General_Fu`. This will place it into the expression builder but we also have to set what value `General_Fu` must be equal to in order to display a label. Click `all unique` and you’ll see the unique values of that column. Press or type the equals sign where the expression is being written and then double click the value we want: `Coal`. Click `OK`.
 
-![](screenshots/qgis2_scrn_label_filterd.png)
+![](screenshots/qgis2_scrn_label_filter.png)
 
 
 
